@@ -1,0 +1,77 @@
+.menu-button {
+  position: fixed;
+  top: 50px;
+  left:40px;
+  transition: .25s;
+  z-index: 20;
+}
+
+.menu-button:hover {
+  cursor: pointer;
+}
+
+.menu-button i{
+	position:absolute;
+	color:#173b6b;
+}
+
+
+.sidenav {
+    background-color: #528ae0;
+    position: fixed;
+    height: 100%;
+    width: 300px;
+    margin-left: -300px;
+    overflow: auto;
+    top:0;
+    padding-top: 80px;
+    transition: .8s;
+    z-index: 15;
+}
+
+.sub-menu {
+	display:none;
+}
+
+.navmenu li i{
+	color:#173b6b;
+}
+
+.show-menu {
+    margin-left: 0;
+    box-shadow: 6px 0px 10px 1px #aeadb9;	
+}
+
+.navmenu{
+	font-family: Raleway;
+	font-size: 1.5em;
+
+}
+
+.navmenu a, .navmenu a:visited{
+	text-decoration: none;
+	color:#173b6b;
+}
+
+.navmenu a:hover{
+	cursor: pointer;
+	text-decoration: underline;
+	transition: .5s;
+	color:white;
+}
+
+.navmenu li {
+	list-style: none;
+	padding: 7px 0;
+}
+
+.menu-arrow:hover {
+	cursor: pointer;
+	color: white;
+}
+
+.Content{
+	margin:100px 200px 0;
+	font-family: Raleway;
+	z-index: 5;
+}
