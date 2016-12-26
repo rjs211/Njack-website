@@ -107,3 +107,15 @@ body{
     color: #173b6b;
     top: 49%;
 }
+
+.brief-hidden{
+	display:none;
+	transition:	1s;
+	font-size:70%;
+}
+
+.brief-show{
+	display:block;
+	transition: 1s;
+	font-size:75%;
+}	
