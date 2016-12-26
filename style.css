@@ -1,3 +1,7 @@
+body{
+	transition: .5s;
+}
+
 .menu-button {
   position: fixed;
   top: 50px;
@@ -16,7 +20,7 @@
 }
 
 
-.sidenav {
+.left-sidenav {
     background-color: #528ae0;
     position: fixed;
     height: 100%;
@@ -33,34 +37,34 @@
 	display:none;
 }
 
-.navmenu li i{
+.left-navmenu li i{
 	color:#173b6b;
 }
 
-.show-menu {
+.left-sidenav.show-menu {
     margin-left: 0;
-    box-shadow: 6px 0px 10px 1px #aeadb9;	
+    box-shadow: 6px 0px 10px 1px #605f6d;	
 }
 
-.navmenu{
+.left-navmenu, .right-navmenu{
 	font-family: Raleway;
 	font-size: 1.5em;
 
 }
 
-.navmenu a, .navmenu a:visited{
+.left-navmenu a, .left-navmenu a:visited,.right-navmenu a, .right-navmenu a:visited{
 	text-decoration: none;
 	color:#173b6b;
 }
 
-.navmenu a:hover{
+.left-navmenu a:hover, .right-navmenu a:hover{
 	cursor: pointer;
-	text-decoration: underline;
+	text-decoration: none;
 	transition: .5s;
 	color:white;
 }
 
-.navmenu li {
+.left-navmenu li ,.right-navmenu li{
 	list-style: none;
 	padding: 7px 0;
 }
@@ -71,7 +75,35 @@
 }
 
 .Content{
-	margin:100px 200px 0;
+	margin:100px 150px 0;
 	font-family: Raleway;
 	z-index: 5;
+}
+
+.right-sidenav {
+	position: fixed;
+    right: -215px;
+	padding: 0 50px 0 0;
+    background-color: #528ae0;
+    height: 100%;
+    width: 180px;
+    overflow: auto;
+    top:0;
+    padding-top: 80px;
+    transition: .8s;
+    z-index: 15;
+    box-shadow: -2px 0px 10px 1px #999999;	
+}
+
+.right-sidenav.show-menu {
+    right: 0px;
+	box-shadow: -6px 0px 10px 1px #999999;
+}
+
+#right-menu-button{
+	margin: 2px;
+    font-size: 1em;
+    position: fixed;
+    color: #173b6b;
+    top: 49%;
 }
