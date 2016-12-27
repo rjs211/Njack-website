@@ -13,10 +13,12 @@ $(document).ready(function() {
 			$('#l-brieft3').removeClass('brief-show');
 			leftmenu='open';
 			document.body.style.backgroundColor = "rgba(0,0,0,0.4)"
+			
 		}
 		else{
 			$(this).animate({left:'-=190px'},100);
-				
+			
+
 			leftmenu='closed';
 			document.body.style.backgroundColor = "rgba(0,0,0,0)"
 		}
@@ -31,6 +33,14 @@ $(document).ready(function() {
 	$('.menu-arrow').click(function() {
 		$(this).next().slideToggle(500);
 	});
+	
+	/*if(leftmenu==='open'){
+		$('Content').click(function(){
+			$('.left-sidenav').animate({left:'-=190px'},100);				
+			leftmenu='closed';
+			document.body.style.backgroundColor = "rgba(0,0,0,0)";
+		});
+	}*/
 	
 	$('.Projects').on('click',function(){
 		$('.proList').slideToggle(600);
@@ -124,4 +134,35 @@ $(document).ready(function() {
 		
 	});
 	
+	var slideIndex = 1;
+showSlides(slideIndex);
+
+	$('.prev').on('click',function(){
+		plusSlides(-1);
+	});
+	
+	$('.next').on('click',function(){
+		plusSlides(+1);
+	});
+
+function plusSlides(n) {
+  showSlides(slideIndex += n);
+}
+
+
+function showSlides(n) {
+  var i;
+  var slides = document.getElementsByClassName("mySlides");
+  
+  if (n > slides.length) {slideIndex = 1} 
+  if (n < 1) {slideIndex = slides.length}
+  for (i = 0; i < slides.length; i++) {
+      slides[i].style.display = "none"; 
+  }
+  
+  slides[slideIndex-1].style.display = "block"; 
+  
+}
+	
 });
+
