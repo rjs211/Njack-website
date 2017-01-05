@@ -6,6 +6,7 @@ $(document).ready(function() {
 		$('.left-sidenav').toggleClass('show-menu');
 		if(leftmenu==='closed'){
 			$(this).animate({left:'+=190px'},100);
+			//Setting default to close
 			$('.proList').slideUp(0);
 			$('#l-brieft2').addClass('brief-hidden');
 			$('#l-brieft2').removeClass('brief-show');
@@ -42,6 +43,14 @@ $(document).ready(function() {
 		});
 	}*/
 	
+	
+/*
+
+for the side menus when opening one tab on hovering, close the other tabs
+brief-show ->displays it
+brief-hidden ->hides it
+
+*/
 	$('.Projects').on('click',function(){
 		$('.proList').slideToggle(600);
 		$('#l-brieft3').removeClass('brief-show');
@@ -137,6 +146,7 @@ $(document).ready(function() {
 	var slideIndex = 1;
 showSlides(slideIndex);
 
+//arrow button press
 	$('.prev').on('click',function(){
 		plusSlides(-1);
 		clearTimeout(myVar);
@@ -146,12 +156,13 @@ showSlides(slideIndex);
 		plusSlides(+1);
 	    clearTimeout(myVar);
 	});
+	
 
 function plusSlides(n) {
   showSlides(slideIndex += n);
 }
 
-
+//Manual changing of slides on clicking the button
 function showSlides(n) {
   var i;
   var slides = document.getElementsByClassName("mySlides");
@@ -166,14 +177,16 @@ function showSlides(n) {
   
 }
 
+//resuming slideshow after mouse is hovered off
 	$('img').mouseout(function(){
 			clearTimeout(myVar);
 		    myVar=setTimeout(showSlides2, 4000);
 	});
 
-slideIndex = 0;
+slideIndex = 0;//current slide
 showSlides2();
 
+//Auto slideshow function
 function showSlides2() {
     var i;
     var slides = document.getElementsByClassName("mySlides");
