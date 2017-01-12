@@ -69,6 +69,7 @@ brief-hidden ->hides it
 	
 	$('#l-t3').on('mouseover',function(){
 		$('#l-brieft3').addClass('brief-show');
+		
 		$('#l-brieft3').removeClass('brief-hidden');
 		$('#l-brieft2').addClass('brief-hidden');
 		$('#l-brieft2').removeClass('brief-show');
