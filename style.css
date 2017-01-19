@@ -212,3 +212,40 @@ body{
 	margin-bottom:0px;
 	width:30%;
 }
+
+
+
+
+.scrlCont {
+    width: 970px;
+    margin: 0 auto;
+    max-width: 80%;
+    -webkit-transform: translateZ(1000px);
+    transform: translateZ(1000px);
+}
+
+
+.scrlElem {
+    width: 40%;
+    clear: both;
+    height: 200px;
+    background: #ff0000;
+    border-radius: 4px;
+    border-style: solid;
+    border-width: 10px;
+     border-color: green;
+    margin: 15vh 0;
+    padding: 15px;
+}
+
+.scrlRight {
+  float: right;
+}
+
+
+.scrlLeft {
+  float: left;
+}
+
+
+
